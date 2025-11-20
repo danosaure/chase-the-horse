@@ -9,7 +9,12 @@
     "lint": "eslint .",
     "preview": "vite preview",
     "storybook": "storybook dev -p 6006",
-    "build-storybook": "storybook build"
+    "build-storybook": "storybook build",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d dist",
+    "test": "vitest run",
+    "test:unit": "vitest run --reporter=verbose unit.test",
+    "test:unit:wait": "vitest --reporter=verbose unit.test"
   },
   "dependencies": {
     "react": "^19.2.0",
